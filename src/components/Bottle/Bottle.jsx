@@ -1,5 +1,5 @@
 import './Bottle.css'
-const Bottle = ({bottle}) => {
+const Bottle = ({bottle ,handelAddToCart}) => {
     console.log(bottle)
     const {name, price, id, img} = bottle
     return (
@@ -7,7 +7,7 @@ const Bottle = ({bottle}) => {
             <h3>Bottle: {name}</h3>
             <img src= {img} alt="" />
             <p>price: {price} </p>
-
+            <button onClick={() =>handelAddToCart(bottle)}>Purchase</button>
         </div>
     );
 };
